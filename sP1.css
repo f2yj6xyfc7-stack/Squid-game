@@ -14,14 +14,14 @@ img{
 
 
 button {
- --glow-color: rgb(227, 10, 10);
+ --glow-color: rgb(246, 237, 237);
  --glow-spread-color: rgba(180, 29, 29, 0.781);
  --enhanced-glow-color: rgb(87, 32, 32);
  --btn-color: rgb(169, 61, 61);
  border: .25em solid var(--glow-color);
  padding: 18px 40px;
  color: var(--glow-color);
- font-size: 40px;
+ font-size: 20px;
  font-weight: bold;
  background-color: var(--btn-color);
  border-radius: 1em;
@@ -31,12 +31,12 @@ button {
         inset 0 0 .75em .25em var(--glow-color);
  text-shadow: 0 0 .5em var(--glow-color);
  transition: all 0.3s;
- bottom: 90px;
- left: 30px;
+ bottom: 200px;
+ left: 150px;
        position: absolute;
        display: flex;
        flex-direction: column;
-       gap: 20px;
+       gap: 10px;
 
 }
 
@@ -60,6 +60,18 @@ button:hover {
  box-shadow: 0 0 1em .25em var(--glow-color),
         0 0 4em 2em var(--glow-spread-color),
         inset 0 0 .75em .25em var(--glow-color);
+}
+
+.button-neon:hover {
+    background:  #ff00ff; 
+      color: #000;
+      box-shadow: 
+        0 0 20px #ff00ff,
+        0 0 40px #ff00ff,
+        0 0 60px #ff00ff,
+        0 0 80px #ff00ff,
+        inset 0 0 20px #fff;
+      animation: neon-pulse 0.1s ease-in-out infinite;
 }
 
 button:active {
