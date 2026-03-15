@@ -37,7 +37,7 @@ body{
     background: transparent;
     border: none;
     outline: none;
-    border: 2px solid rgb(237, 233, 233);
+    border: 2px solid rgba(255, 255, 255 .2);
     border-radius: 40px;
     padding: 0 20px;
     font-size: 16px;
@@ -59,7 +59,7 @@ body{
     display: flex;
     justify-content: space-between;
     font-size: 14.5px;
-    margin: -15px 0 15px;
+    margin: 5px 0 15px;
 }
 .remember-forgot label input{
     accent-color: #fff;
@@ -98,3 +98,4 @@ body{
 }
 .register-link p a:hover{
     text-decoration: underline;
+}
