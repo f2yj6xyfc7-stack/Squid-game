@@ -101,3 +101,42 @@ body{
 .register-link p a:hover{
     text-decoration: underline;
 }
+
+
+.button { /*هذا والي تحت كلهم تنسيق لزر الانضمام اذا ماتبينهم احذفيهم او عدلي عليهم*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  gap: 15px;
+  background-color: #ffffff;
+  outline: 3px #1e1d1d solid;
+  outline-offset: -3px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 400ms;
+}
+
+.button .text {
+  color: rgb(30, 28, 28);
+  font-weight: 700;
+  font-size: 1em;
+  transition: 400ms;
+}
+
+.button svg path {
+  transition: 400ms;
+}
+
+.button:hover {
+  background-color: transparent;
+}
+
+.button:hover .text {
+  color: #1f1d1d;
+}
+
+.button:hover svg path {
+  fill: #222020;
+}
