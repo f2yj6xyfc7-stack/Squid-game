@@ -1,0 +1,123 @@
+
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "roboto";
+    background-color: #7b2030;
+    margin: 30px 88px;
+    height: 100vh;
+}
+
+/* الحاوية اللي تجمع 12 كرت */
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    justify-items: center;
+    perspective: 4000px;
+}
+
+/* الكرت */
+.card {
+    width: 360px;
+    height: 530px;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease-in-out;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2),
+    -5px -5px 10px rgba(0,0,0,0.05);
+    border-radius: 15px;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.front-page,
+.back-page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+}
+
+/* الواجهة الأمامية */
+.front-page {
+    background-image: url(th.jpg);
+    background-size: cover;
+}
+
+/* معلومات قدام */
+.card-info {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+.card-title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.card-subtitle {
+    font-size: 1.2rem;
+    margin-top: 5px;
+    color: #fd5c5c;
+}
+
+/* الخلف */
+.back-page {
+    background-color: #1e272e;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.card-content {
+    text-align: center;
+    padding: 20px;
+    max-width: 230px;
+}
+
+.card-content h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card-description {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.card-button {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card-button:hover {
+    background-color: transparent;
+    color: #f90f0f;
+    border: 1px solid #f90f0f;
+}
+
