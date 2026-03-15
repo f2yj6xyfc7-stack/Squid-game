@@ -12,16 +12,26 @@ img{
        display: block;
 }
 
+.button-box{
+       position: absolute;
+       bottom: 120px;
+       left: 120px;
+       display: flex;
+       flex-direction: column;
+       gap: 0px;
+}
 
-button {
+
+.button-neon {
  --glow-color: rgb(246, 237, 237);
  --glow-spread-color: rgba(180, 29, 29, 0.781);
  --enhanced-glow-color: rgb(87, 32, 32);
  --btn-color: rgb(169, 61, 61);
+
  border: .25em solid var(--glow-color);
- padding: 18px 40px;
+ padding: 25px 100px;
  color: var(--glow-color);
- font-size: 20px;
+ font-size: 24px;
  font-weight: bold;
  background-color: var(--btn-color);
  border-radius: 1em;
@@ -29,18 +39,12 @@ button {
  box-shadow: 0 0 1em .25em var(--glow-color),
         0 0 4em 1em var(--glow-spread-color),
         inset 0 0 .75em .25em var(--glow-color);
+
  text-shadow: 0 0 .5em var(--glow-color);
  transition: all 0.3s;
- bottom: 200px;
- left: 150px;
-       position: absolute;
-       display: flex;
-       flex-direction: column;
-       gap: 10px;
-
 }
 
-button::after {
+.button-neon::after {
  pointer-events: none;
  content: "";
  position: absolute;
@@ -54,7 +58,7 @@ button::after {
  transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
 }
 
-button:hover {
+.button-neon:hover {
  color: var(--btn-color);
  background-color: var(--glow-color);
  box-shadow: 0 0 1em .25em var(--glow-color),
@@ -63,18 +67,18 @@ button:hover {
 }
 
 .button-neon:hover {
-    background:  #ff00ff; 
+    background:  #ae0129; 
       color: #000;
       box-shadow: 
-        0 0 20px #ff00ff,
-        0 0 40px #ff00ff,
-        0 0 60px #ff00ff,
-        0 0 80px #ff00ff,
+        0 0 20px #861d1d,
+        0 0 40px #6c1313,
+        0 0 60px #ff0f37,
+        0 0 80px #c40202,
         inset 0 0 20px #fff;
       animation: neon-pulse 0.1s ease-in-out infinite;
 }
 
-button:active {
+.button-neon:active {
  box-shadow: 0 0 0.6em .25em var(--glow-color),
         0 0 2.5em 2em var(--glow-spread-color),
         inset 0 0 .5em .25em var(--glow-color);
