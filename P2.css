@@ -16,12 +16,9 @@ body{
 .wrapper{
     width: 420px;
     background: transparent;
-<<<<<<< HEAD
     border: 2px solid ;
-=======
     border: 2px solid rgba(255, 255, 255, .2);
     border: 2px solid white;
->>>>>>> f41d26c53248858fed4e1b1b4395e71133671feb
     backdrop-filter: blur(10px);    
     color: #fff;
     border-radius: 16px;
