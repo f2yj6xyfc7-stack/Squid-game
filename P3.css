@@ -47,3 +47,12 @@ body{
         translate: calc(-4*250px);
     }
 }
+
+.top-button{
+    position: absolute;
+    top: 0px;
+    right:0px;
+    width: 80px;
+    background: transparent;
+    cursor: pointer;
+}
