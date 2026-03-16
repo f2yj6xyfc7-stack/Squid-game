@@ -16,7 +16,7 @@ body{
 .wrapper{
     width: 420px;
     background: transparent;
-    border: 2px solid rgba(255, 255, 255 .0.6);
+    border: 2px solid white;
     backdrop-filter: blur(10px);    
     color: #fff;
     border-radius: 12px;
