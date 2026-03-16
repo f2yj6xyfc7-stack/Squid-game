@@ -16,10 +16,10 @@ body{
 .wrapper{
     width: 420px;
     background: transparent;
-    border: 2px solid rgba(255, 255, 255 .0.6);
+    border: 2px solid rgba(255, 255, 255, .2);
     backdrop-filter: blur(10px);    
     color: #fff;
-    border-radius: 12px;
+    border-radius: 16px;
     padding: 30px 40px;
 }
 .wrapper h1{
@@ -39,9 +39,9 @@ body{
     background: transparent;
     border: none;
     outline: none;
-    border: 2px solid rgba(255, 255, 255 .2);
-    border-radius: 40px;
-    padding: 0 20px;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 60px;
+    padding: 0 60px;
     font-size: 16px;
     color: #fff;
     padding: 20px 45px 20px 20px;
@@ -50,9 +50,10 @@ body{
     color: #fff;
 }
 .input-box i{
-    position: absolute;
+    position:absolute;
     right: 20px;
-    top: 30;
+    top: -20;
+    bottom: 15px;
     transform: translate(-50);
     font-size: 20px;
 
