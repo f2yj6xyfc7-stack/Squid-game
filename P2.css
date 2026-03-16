@@ -15,8 +15,8 @@ body{
 }
 .wrapper{
     width: 420px;
-    background: transparent
-    border: 2px solid rgba(255, 255, 255 .0.3);
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255 .0.6);
     backdrop-filter: blur(10px);    
     color: #fff;
     border-radius: 12px;
@@ -100,4 +100,47 @@ body{
 }
 .register-link p a:hover{
     text-decoration: underline;
+}
+
+
+.input-g {/* تنسيق لازرار الجنس*/
+    color: white;
+    margin-top: 10px;
+}
+
+.input-g label {
+    margin-right: 15px;
+    font-size: 16px;
+}
+
+.input-g input[type="radio"] {
+    accent-color: #ff4d6d;
+    transform: scale(1.2);
+    margin-right: 5px;
+}
+
+
+
+.input-c select {/*تنسيق للمدن*/
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+
+.input-c label {
+    color: white;
+    font-size: 16px;
+}
+
+
+.input-c select {
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
