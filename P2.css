@@ -128,7 +128,7 @@ body{
     border: none;
     outline: none;
     background: rgba(255,255,255,0.1);
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 15px;
     margin-top: 5px;
 }
