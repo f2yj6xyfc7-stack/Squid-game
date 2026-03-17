@@ -20,14 +20,11 @@ button{
     white-space: nowrap;
 }
 button,button::after {
-<<<<<<< HEAD
   font-size: 35px;
   border: none;
-=======
   padding: 10px 50px;
   font-size: 20px;
   border: 2px solid #000000;
->>>>>>> 7e910c2735900464eccfec81a0c1d5cf7e8a9a8c
   border-radius: 5px;
   color: rgb(0, 0, 0);
   background-color: transparent;
