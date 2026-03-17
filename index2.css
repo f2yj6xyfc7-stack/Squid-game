@@ -51,19 +51,19 @@ button:hover::after {
   animation: glitch_4011 1s;
   text-shadow: 10 10px 10px black;
   animation-timing-function: steps(2, end);
-  text-shadow: -3px -3px 0px #d725ab, 3px 3px 0px #0ed2d5;
+  text-shadow: -3px -3px 0px #d725ab, 3px 3px 0px #7adcff;
   background-color: transparent;
-  border: 3px solid rgb(0, 255, 213);
+  border: 3px solid rgb(82, 196, 241);
 }
 
 button:hover {
-  text-shadow: -1px -1px 0px #1df2f0, 1px 1px 0px #E94BE8;
+  text-shadow: -1px -1px 0px #e22195, 1px 1px 0px #5de5f7;
 }
 
 button:hover {
   background-color: transparent;
-  border: 1px solid rgb(0, 255, 213);
-  box-shadow: 0px 10px 10px -10px rgb(0, 255, 213);
+  border: 1px solid rgb(210, 22, 147);
+  box-shadow: 0px 10px 10px -10px rgb(71, 218, 241);
 }
 
 @keyframes glitch_4011 {
