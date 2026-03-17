@@ -11,75 +11,121 @@ img{
        object-fit: cover;
        display: block;
 }
+button{
+  font-family: 'Black Ops One', cursive;
+    font-size: 34px;
+    letter-spacing: 3px;
+    color: #ff2e63; /* وردي قريب من السكود قيم */
 
-.button-box{
-       position: absolute;
-       bottom: 120px;
-       left: 120px;
-       display: flex;
-       flex-direction: column;
-       gap: 0px;
+    position: absolute;
+    top:55%;
+    left:70%;
+    transform: translate(-50%, -50%);
+    padding: 20px 80px;/*يكبر الزر */
+    white-space: nowrap;
+}
+button,button::after {
+  font-size: 35px;
+  border: none;
+  padding: 10px 50px;
+  font-size: 20px;
+  border: 2px solid #000000; /* لون حدود الزر */
+  border-radius: 5px;
+  color: rgb(0, 0, 0); /* لون join */
+  font-family: Game Of Squids, sans-serif;
+  background-color: transparent;
 }
 
-
-.button-neon {
- --glow-color: rgb(246, 237, 237);
- --glow-spread-color: rgba(180, 29, 29, 0.781);
- --enhanced-glow-color: rgb(87, 32, 32);
- --btn-color: rgb(169, 61, 61);
-
- border: .25em solid var(--glow-color);
- padding: 15px 50px;
- color: var(--glow-color);
- font-size: 24px;
- font-weight: bold;
- background-color: var(--btn-color);
- border-radius: 1em;
- outline: none;
- box-shadow: 0 0 1em .25em var(--glow-color),
-        0 0 4em 1em var(--glow-spread-color),
-        inset 0 0 .75em .25em var(--glow-color);
-
- text-shadow: 0 0 .5em var(--glow-color);
- transition: all 0.3s;
+button::after {
+  --move1: inset(50% 50% 50% 50%);
+  --move2: inset(31% 0 40% 0);
+  --move3: inset(39% 0 15% 0);
+  --move4: inset(45% 0 40% 0);
+  --move5: inset(45% 0 6% 0);
+  --move6: inset(14% 0 61% 0);
+  clip-path: var(--move1);
+  content: "Join Us";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
 }
 
-.button-neon::after {
- pointer-events: none;
- content: "";
- position: absolute;
- top: 120%;
- left: 0;
- height: 100%;
- width: 100%;
- background-color: var(--glow-spread-color);
- filter: blur(2em);
- opacity: .7;
- transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+button:hover::after {
+  animation: glitch_4011 1s;
+  text-shadow: 10 10px 10px black;
+  animation-timing-function: steps(2, end);
+  text-shadow: -3px -3px 0px #d725ab, 3px 3px 0px #7adcff;
+  background-color: transparent;
+  border: 3px solid rgb(82, 196, 241);
 }
 
-.button-neon:hover {
- color: var(--btn-color);
- background-color: var(--glow-color);
- box-shadow: 0 0 1em .25em var(--glow-color),
-        0 0 4em 2em var(--glow-spread-color),
-        inset 0 0 .75em .25em var(--glow-color);
+button:hover {
+  text-shadow: -1px -1px 0px #e22195, 1px 1px 0px #5de5f7;
 }
 
-.button-neon:hover {
-    background:  #ae0129; 
-      color: #000;
-      box-shadow: 
-        0 0 20px #861d1d,
-        0 0 40px #6c1313,
-        0 0 60px #ff0f37,
-        0 0 80px #c40202,
-        inset 0 0 20px #fff;
-      animation: neon-pulse 0.1s ease-in-out infinite;
+button:hover {
+  background-color: transparent;
+  border: 1px solid rgb(210, 22, 147);
+  box-shadow: 0px 10px 10px -10px rgb(71, 218, 241);
 }
 
-.button-neon:active {
- box-shadow: 0 0 0.6em .25em var(--glow-color),
-        0 0 2.5em 2em var(--glow-spread-color),
-        inset 0 0 .5em .25em var(--glow-color);
+@keyframes glitch_4011 {
+  0% {
+    clip-path: var(--move1);
+    transform: translate(0px,-10px);
+  }
+
+  10% {
+    clip-path: var(--move2);
+    transform: translate(-10px,10px);
+  }
+
+  20% {
+    clip-path: var(--move3);
+    transform: translate(10px,0px);
+  }
+
+  30% {
+    clip-path: var(--move4);
+    transform: translate(-10px,10px);
+  }
+
+  40% {
+    clip-path: var(--move5);
+    transform: translate(10px,-10px);
+  }
+
+  50% {
+    clip-path: var(--move6);
+    transform: translate(-10px,10px);
+  }
+
+  60% {
+    clip-path: var(--move1);
+    transform: translate(10px,-10px);
+  }
+
+  70% {
+    clip-path: var(--move3);
+    transform: translate(-10px,10px);
+  }
+
+  80% {
+    clip-path: var(--move2);
+    transform: translate(10px,-10px);
+  }
+
+  90% {
+    clip-path: var(--move4);
+    transform: translate(-10px,10px);
+  }
+
+  100% {
+    clip-path: var(--move1);
+    transform: translate(0);
+  }
 }
+
