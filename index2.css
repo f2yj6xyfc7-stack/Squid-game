@@ -12,6 +12,11 @@ img{
        display: block;
 }
 button{
+  font-family: 'Black Ops One', cursive;
+    font-size: 34px;
+    letter-spacing: 3px;
+    color: #ff2e63; /* وردي قريب من السكود قيم */
+
     position: absolute;
     top:55%;
     left:70%;
