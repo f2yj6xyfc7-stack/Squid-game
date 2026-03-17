@@ -16,12 +16,11 @@ button{
     top:55%;
     left:70%;
     transform: translate(-50%, -50%);
-    padding: 20px 80px;
-    font-size: 28px;
+    padding: 20px 80px;/*يكبر الزر */
+    white-space: nowrap;
 }
 button,button::after {
-  padding: 10px 50px;
-  font-size: 20px;
+  font-size: 35px;
   border: none;
   border-radius: 5px;
   color: white;
