@@ -29,9 +29,9 @@ button,button::after {
   border: none;
   padding: 10px 50px;
   font-size: 20px;
-  border: 2px solid #000000;
+  border: 2px solid #000000; /* لون حدود الزر */
   border-radius: 5px;
-  color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0); /* لون join */
   background-color: transparent;
 }
 
