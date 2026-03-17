@@ -47,16 +47,6 @@ body{
         translate: calc(-4*250px);
     }
 }
-
-.top-button{
-    position: absolute;
-    top: 15px;
-    right:0px;
-    width: 80px;
-    background: transparent;
-    cursor: pointer;
-}
-
 * {
   margin: 0;
   padding: 0;
