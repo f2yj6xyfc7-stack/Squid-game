@@ -130,10 +130,36 @@ body{
     border-radius: 10px;
     border: none;
     outline: none;
-    background: rgba(0, 0, 0, 0.1);
-    color: rgb(0, 0, 0);
+    background: rgba(255, 255, 255, 0.27);
+    color: rgb(255, 255, 255);
     font-size: 15px;
     margin-top: 5px;
+}
+
+{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: rgba(0, 0, 0, 0.1);
+    color: #ffffff !important;           /* نص أبيض */
+    font-size: 15px;
+    margin-top: 5px;
+    color-scheme: dark;                  /* مهم جدًا للـ Dark Mode */
+}
+
+/* قائمة الخيارات (options) عند فتح الـ dropdown */
+.input-c select option {
+    background-color: #2a2a2a !important;
+    color: #ffffff !important;
+    padding: 10px;
+}
+
+/* عند الـ hover (لما تمرر الماوس) */
+.input-c select option:hover {
+    background-color: #444444 !important;
+    color: #ffffff !important;
 }
 
 
