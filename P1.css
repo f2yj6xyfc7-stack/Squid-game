@@ -18,8 +18,8 @@ button{
     color: #ff2e63; /* وردي قريب من السكويد قيم */
 
     position: absolute;
-    top:55%;
-    left:70%;
+    top:80%;
+    left: 38%;
     transform: translate(-50%, -50%);
     padding: 20px 80px;/*يكبر الزر */
     white-space: nowrap;
@@ -29,9 +29,9 @@ button,button::after {
   border: none;
   padding: 10px 50px;
   font-size: 20px;
-  border: 2px solid #000000; /* لون حدود الزر */
+  border: 2px solid #ffffff; /* لون حدود الزر */
   border-radius: 5px;
-  color: rgb(0, 0, 0); /* لون join */
+  color: rgb(255, 255, 255); /* لون join */
   font-family: Game Of Squids, sans-serif;
   background-color: transparent;
 }
