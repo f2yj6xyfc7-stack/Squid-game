@@ -56,3 +56,357 @@ p {
         transform: translateY(0); 
     }
 }
+/* From Uiverse.io by dexter-st */ 
+/* Radio group styles */
+.radio-group {
+  --radio-size-total: 120px; /* Total size */
+  --radio-border: 12px; /* Border thickness */
+
+  --radio-bg-hue: 220; /* Background hue */
+  --radio-border-hue: 210; /* Border hue */
+
+  --transition-speed: 0.05s; /* Transition speed for hover effects */
+  --glow-speed: 1.25s; /* Speed for glow animation */
+  --glow-times: 3; /* Number of times the glow animation runs */
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Base */
+.radio-container {
+  position: relative;
+  width: var(--radio-size-total);
+  height: var(--radio-size-total);
+  border-radius: 50%;
+  background-color: hsl(var(--radio-border-hue), 20%, 20%);
+  box-shadow: 0 calc(var(--radio-border) / 3) 4px 0 #0007;
+}
+
+/* Base bevels */
+.radio-container::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: hsla(var(--radio-border-hue), 20%, 10%, 1);
+  mask: radial-gradient(
+    circle at 50% 50%,
+    transparent calc(var(--radio-size-total) / 2 - var(--radio-border)),
+    black calc(var(--radio-size-total) / 2 - var(--radio-border) + 1px),
+    black calc(var(--radio-size-total) / 2 - var(--radio-border) + 3px),
+    transparent calc(var(--radio-size-total) / 2 - var(--radio-border) + 5px),
+    transparent calc(var(--radio-size-total) / 2 - 5px),
+    black calc(var(--radio-size-total) / 2 - 3px)
+  );
+  z-index: 1;
+}
+
+.radio-button {
+  position: absolute;
+  top: calc(var(--radio-border) / 1);
+  left: calc(var(--radio-border) / 1);
+  width: calc(var(--radio-size-total) - var(--radio-border) * 2);
+  height: calc(var(--radio-size-total) - var(--radio-border) * 2);
+  border-radius: 50%;
+  background-color: hsl(var(--radio-bg-hue), 100%, 50%);
+  background-image: linear-gradient(
+    to bottom,
+    hsl(var(--radio-bg-hue), 100%, 60%) 0%,
+    hsl(var(--radio-bg-hue), 100%, 50%) 70%,
+    hsl(var(--radio-bg-hue), 100%, 30%) 100%
+  );
+  box-shadow: 0 calc(var(--radio-border) * 2) 6px 6px #0003;
+  transition: box-shadow var(--transition-speed) ease-in-out;
+}
+
+/* Gloss effects 1 */
+.radio-button::before {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  top: calc(-1 * var(--radio-border));
+  left: calc(-1 * var(--radio-border));
+  width: var(--radio-size-total);
+  height: var(--radio-size-total);
+  border-radius: 50%;
+  background-image: radial-gradient(
+      circle at 50% 50%,
+      transparent calc(var(--radio-size-total) / 2 - var(--radio-border)),
+      hsla(var(--radio-border-hue), 100%, 0%, 0.5) 75%
+    ),
+    conic-gradient(
+      from 20deg at 50% 50%,
+      #fff 0%,
+      transparent 1%,
+      #fff4 20%,
+      #0002 50%,
+      #fff8 75%,
+      transparent 85%,
+      #fffa 86%,
+      #fff6 87%,
+      transparent 99%,
+      #fff 100%
+    );
+  mask-image: radial-gradient(
+    circle at 50% 50%,
+    transparent 0,
+    transparent 30%,
+    black 35%,
+    black calc(var(--radio-size-total) / 2),
+    transparent calc(var(--radio-size-total) / 2 + 2px)
+  );
+}
+
+/* Gloss effects 2 */
+.radio-button::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+
+  background-image:
+  /* Small reflection */
+    radial-gradient(
+      ellipse 6% 4% at 43% 29%,
+      #fffe 35%,
+      #fff8 55%,
+      transparent 100%
+    ),
+    /* Repeating small reflections */
+      radial-gradient(
+        ellipse 3% 2% at 75% 20%,
+        #fffd 45%,
+        #fff8 50%,
+        transparent 100%
+      ),
+    radial-gradient(
+      ellipse 2% 1% at 70% 30%,
+      #fffc 15%,
+      #fff7 50%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 2% 1% at 65% 40%,
+      #fffa 15%,
+      #fff5 50%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 3% 2% at 25% 22%,
+      #fffd 45%,
+      #fff8 50%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 2% 1% at 30% 32%,
+      #fffc 15%,
+      #fff7 50%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 2% 1% at 35% 42%,
+      #fffa 15%,
+      #fff5 50%,
+      transparent 100%
+    ),
+    /* Large reflection */
+      radial-gradient(
+        ellipse 70% 50% at 50% 37%,
+        transparent 0%,
+        #fff2 45%,
+        #fff3 51%,
+        transparent 57%
+      ),
+    radial-gradient(
+      circle at 50% 50%,
+      transparent 40%,
+      #fff2 47%,
+      #fff1 68%,
+      transparent 59%,
+      transparent 100%
+    );
+
+  box-shadow: 0 0 calc(var(--radio-border) / 3) 3px #000c inset;
+  z-index: 1;
+  transition:
+    box-shadow var(--transition-speed) ease-in-out,
+    background-image var(--transition-speed) ease-in-out;
+}
+
+/* Radio input (no appearance) */
+.radio-input-element {
+  position: absolute;
+  top: calc(var(--radio-border) / 1);
+  left: calc(var(--radio-border) / 1);
+  width: calc(var(--radio-size-total) - var(--radio-border) * 2);
+  height: calc(var(--radio-size-total) - var(--radio-border) * 2);
+  appearance: none;
+  border-radius: 50%;
+  background-color: transparent;
+  opacity: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* Radio icon */
+.radio-icon-element {
+  position: absolute;
+  pointer-events: none;
+
+  width: 75%;
+  height: 75%;
+  top: 12.5%;
+  left: 12.5%;
+
+  fill: none;
+  stroke: rgba(230, 230, 230, 0.9);
+  stroke-width: 3px;
+  stroke-linecap: square;
+  filter: drop-shadow(0 14px 3px rgba(0, 0, 0, 0.4));
+
+  /* Simulate spherical shading */
+  mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+  mask-composite: exclude;
+  -webkit-mask-image: radial-gradient(
+    circle at center,
+    black 40%,
+    transparent 100%
+  );
+  -webkit-mask-composite: destination-out;
+
+  z-index: 0;
+  transition:
+    transform calc(var(--transition-speed) * 0.25) ease-in-out,
+    filter calc(var(--transition-speed) * 0.25) ease-in-out;
+}
+
+.glow {
+  pointer-events: none;
+  position: absolute;
+  top: -15%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: color-mix(
+    in hsl,
+    hsl(var(--radio-bg-hue), 100%, 60%),
+    rgb(255, 225, 92) 15%
+  );
+  filter: blur(2em);
+  opacity: 0.45;
+  transform: perspective(100px) rotateX(10deg) scale(0.8);
+  z-index: 1;
+  opacity: 0;
+}
+
+/* Checked state styles */
+.radio-container:has(.radio-input-element:checked) {
+  .radio-button {
+    box-shadow: 0 calc(var(--radio-border) * 2) 12px 2px #0004;
+  }
+
+  .radio-button::after {
+    box-shadow: 0 0 var(--radio-border) calc(var(--radio-border) / 2) #000c
+      inset;
+  }
+  .glow {
+    animation: pulse var(--glow-speed) ease-in-out var(--glow-times) forwards;
+  }
+
+  .radio-icon-element {
+    filter: drop-shadow(0 12px 2px rgba(0, 0, 0, 0.5));
+  }
+}
+
+.radio-container:has(.radio-input-element:checked):hover {
+  .radio-icon-element {
+    filter: drop-shadow(0 16px 4px rgba(0, 0, 0, 0.4));
+  }
+}
+
+.radio-container:has(.radio-input-element:checked):active {
+  .radio-icon-element {
+    filter: drop-shadow(0 10px 2px rgba(0, 0, 0, 0.4));
+  }
+}
+
+/* Hover effect */
+.radio-container:hover {
+  .radio-button {
+    box-shadow: 0 calc(var(--radio-border) * 2.5) 12px 2px #0003;
+  }
+
+  .radio-button::after {
+    box-shadow: 0 0 calc(var(--radio-border) / 3) 3px #0005 inset;
+    scale: 1.05;
+  }
+
+  .radio-icon-element {
+    transform: scale(1.05);
+    filter: drop-shadow(0 16px 4px rgba(0, 0, 0, 0.4));
+  }
+}
+
+/* Active state styles */
+.radio-container:active {
+  .radio-button {
+    box-shadow: 0 calc(var(--radio-border) * 1.5) 6px 4px #0003;
+  }
+
+  .radio-button::after {
+    box-shadow: 0 0 calc(var(--radio-border) / 1) var(--radio-border) #0009
+      inset;
+    scale: 1;
+  }
+
+  .radio-icon-element {
+    transform: scale(0.95);
+    filter: drop-shadow(0 10px 2px rgba(0, 0, 0, 0.4));
+  }
+}
+
+/* Pulse animation for glow effect */
+@keyframes pulse {
+  0% {
+    transform: perspective(100px) rotateX(10deg) scale(0.8);
+    opacity: 0.45;
+  }
+  50% {
+    transform: perspective(100px) rotateX(10deg) scale(1);
+    opacity: 0.75;
+  }
+  100% {
+    transform: perspective(100px) rotateX(10deg) scale(0.8);
+    opacity: 0.45;
+  }
+}
+
+/* Color themes */
+.success {
+  --radio-bg-hue: 145;
+}
+
+.warning {
+  --radio-bg-hue: 40;
+}
+
+.danger {
+  --radio-bg-hue: 355;
+}
+
+.info {
+  --radio-bg-hue: 200;
+}
