@@ -1,0 +1,58 @@
+/* الخلفية الرئيسية */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    position: relative;          /* مهم جداً */
+    background: #000;            /* لون خلفي مؤقت أسود */
+}
+
+/* طبقة منفصلة للصورة عشان نتحكم في fade in */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(frontman.webp) no-repeat center center;  
+    background-size: cover;
+    z-index: -1;
+    opacity: 0;                     /* تبدأ شفافة */
+    animation: fadeInBackground 3s ease forwards;   /* 3 ثواني، */
+}
+
+/* النص (الكلام) - خليه زي ما هو أو زدله تأخير */
+p {
+    position: top;
+    bottom: 50px;
+    left: 80;
+    right: 0;
+    color: aliceblue;
+    font-size: 20px;
+    font-family: monospace;
+    padding: 0 40px;
+    text-align: left;
+    opacity: 0;
+    animation: fadeInText 2.5s ease 1.2s forwards;   /* تأخير 1.2 ثانية عشان الصورة تظهر أول */
+}
+
+/* الحركات */
+@keyframes fadeInBackground {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes fadeInText {
+    from { 
+        opacity: 0; 
+        transform: translateY(30px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
