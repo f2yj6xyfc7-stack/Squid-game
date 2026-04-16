@@ -59,7 +59,7 @@ p {
 /* From Uiverse.io by dexter-st */ 
 /* Radio group styles */
 .radio-group {
-  --radio-size-total: 120px; /* Total size */
+  --radio-size-total: 80px; /* Total size */
   --radio-border: 12px; /* Border thickness */
 
   --radio-bg-hue: 220; /* Background hue */
@@ -72,8 +72,12 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: 3rem;
-  align-items: center;
-  justify-content: center;
+  position: absolute;
+  bottom: 20px;
+  right: -90px;
+  align-items: right;
+  justify-content: right;
+  transform: translateX(-50%);
 }
 
 /* Base */
