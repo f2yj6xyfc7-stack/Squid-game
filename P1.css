@@ -18,8 +18,8 @@ button{
     color: #ff2e63; /* وردي قريب من السكويد قيم */
 
     position: absolute;
-    top: 78%;
-    right: 59%;
+    top: 60%;
+    left: 48%;
     transform: translate(-50%, -50%);
     padding: 20px 80px;
     white-space: nowrap;
