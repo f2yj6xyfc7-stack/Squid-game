@@ -74,7 +74,7 @@ p {
   gap: 3rem;
   position: absolute;
   bottom: 20px;
-  right: -90px;
+  right: -5px;
   align-items: right;
   justify-content: right;
   transform: translateX(-50%);
