@@ -27,14 +27,14 @@ body::before {
 
 /* النص (الكلام) - خليه زي ما هو أو زدله تأخير */
 p {
-    position: top;
+    position: absolute;
     bottom: 50px;
-    left: 80;
-    right: 0;
+    left: 80px;
+    width: 400px;
     color: aliceblue;
     font-size: 20px;
     font-family: monospace;
-    padding: 0 40px;
+    padding: 0 40px;    
     text-align: left;
     opacity: 0;
     animation: fadeInText 2.5s ease 1.2s forwards;   /* تأخير 1.2 ثانية عشان الصورة تظهر أول */
