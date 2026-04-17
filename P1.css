@@ -15,7 +15,7 @@ button{
   font-family: 'Black Ops One', cursive;
     font-size: 34px;
     letter-spacing: 3px;
-    color: #ff2e63; /* وردي قريب من السكويد قيم */
+    color: #ff2e63; 
 
     position: absolute;
     top: 60%;
@@ -53,7 +53,7 @@ button::after {
 }
 
 button:hover::after {
-  animation: glitch_4011 1s;
+  animation: glitch_4011 1s; /*اضافه حركه للعنصر*/
   text-shadow: 10 10px 10px black;
   animation-timing-function: steps(2, end);
   text-shadow: -3px -3px 0px #d725ab, 3px 3px 0px #7adcff;
