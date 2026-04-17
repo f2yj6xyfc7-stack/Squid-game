@@ -36,7 +36,7 @@ body {
         fill: none;
     }
     50%{
-        opacity: 0;
+        opacity: 1;
         fill: #fd287e;
     }
     100%{
