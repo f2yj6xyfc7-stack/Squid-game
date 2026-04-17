@@ -1,6 +1,6 @@
 console.clear();
 let distance = 0;
-let isWatching = true;
+let isWatching = true; 
 
 let gameStarted = false;
 let distanceSinceWatching = 0;
@@ -59,7 +59,7 @@ elStart.addEventListener("click", () => {
   }, 5000);
 });
 
-const initTimer = (time) => {
+const initTimer = (time) => {      ////
   let maxTime = time ? time : 14;
 
   timerInterval = setInterval(() => {
@@ -89,7 +89,7 @@ const startCountdown = () => {
   let countdown = 5;
   countdownEl.innerHTML = countdown;
 
-  countdownInterval = setInterval(() => {
+  countdownInterval = setInterval(() => {     /////
     countdown--;
     countdownEl.innerHTML = countdown;
   }, 1000);
@@ -148,14 +148,14 @@ function dead() {
 }
 
 let watchingTween = null;
-function updateWatching() {
+function updateWatching() {   //
   if (!playing) return;
 
   isWatching = !isWatching;
 
   let duration = Math.random() * 3.5 + 2.5;
   if (isWatching) {
-    duration = Math.random() * 2 + 2;
+    duration = Math.random() * 2 + 2;    //
   }
   if (!isWatching) {
     audioDoll.currentTime = 0;
@@ -352,7 +352,7 @@ const initDetection = async () => {
   }
 };
 
-const detectPosesRealTime = async (detector) => {
+const detectPosesRealTime = async (detector) => {   ///
   let previousPositions = [];
 
   async function poseDetection() {
