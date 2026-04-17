@@ -15,7 +15,7 @@ body{
 }
 .wrapper{
     width: 420px;
-    background: transparent;
+    background: transparent;  /* الخلفيه شفافه*/
     border: 2px solid ;
     border: 2px solid rgba(255, 255, 255, .2);
     border: 2px solid white;
@@ -146,7 +146,7 @@ body{
     color: #ffffff !important;           /* نص أبيض */
     font-size: 15px;
     margin-top: 5px;
-    color-scheme: dark;                  /* مهم جدًا للـ Dark Mode */
+    color-scheme: dark;                  /*    Dark Mode */
 }
 
 /* قائمة الخيارات (options) عند فتح الـ dropdown */
