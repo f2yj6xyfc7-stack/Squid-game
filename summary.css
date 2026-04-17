@@ -6,10 +6,9 @@ body {
     min-height: 100vh;
     margin: 0;
     overflow: hidden;
-    position: relative;          /* مهم جداً */
-    background: #000;            /* لون خلفي مؤقت أسود */
+    position: relative;         
+    background: #000;            
 }
-
 /* طبقة منفصلة للصورة عشان نتحكم في fade in */
 body::before {
     content: "";
@@ -25,7 +24,7 @@ body::before {
     animation: fadeInBackground 3s ease forwards;   /* 3 ثواني، */
 }
 
-/* النص (الكلام) - خليه زي ما هو أو زدله تأخير */
+/*النص */
 p {
     position: absolute;
     bottom: 50px;
