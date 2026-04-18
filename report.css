@@ -11,7 +11,7 @@ body{
     align-items: center;
     min-height: 100vh;
     background-position: center;
-    background: url(reportbackground.jpeg) no-repeat center center;
+    background: url(reportbackground.jpeg) center;
     background-size: cover;
     color: rgb(1, 1, 1);
     font-weight: bold;
